@@ -1,0 +1,76 @@
+service: dio-aws-serverless-local-wks
+
+plugins:
+  - serverless-localstack
+
+custom:
+  localstack:
+    debug: true
+    stages:
+      - local
+      - dev
+    endpointFile: localstack_enpoints.json
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+
+functions:
+  hello:
+    handler: src/handler.hello
+    timeout: 45
+    events:
+      - http:
+          path: hello
+          method: get
+
+  putItem:
+    handler: src/putItem.handler
+    timeout: 45
+    events:
+      - http:
+          path: putitem
+          method: post
+
+  scanItems:
+    handler: src/scanItems.handler
+    timeout: 45
+    events:
+      - http:
+          path: scanitems
+          method: get
+
+  getItem:
+    handler: src/getItem.handler
+    timeout: 45
+    events:
+      - http:
+          path: getitem
+          method: get
+
+  createTable:
+    handler: src/createTable.handler
+    timeout: 45
+    events:
+      - http:
+          path: createtable
+          method: post
+
+  listTables:
+    handler: src/listTables.handler
+    timeout: 45
+    events:
+      - http:
+          path: listtables
+          method: get
+
+  updateItem:
+    handler: src/updateItem.handler
+    timeout: 45
+    events:
+      - http:
+          path: updateitem
+          method: put

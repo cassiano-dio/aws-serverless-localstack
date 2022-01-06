@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "aws-sdk": "^2.1050.0",
+    "serverless-localstack": "^0.4.35"
+  }
+}

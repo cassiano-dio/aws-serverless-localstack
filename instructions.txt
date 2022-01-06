@@ -1,0 +1,51 @@
+-> Docker
+
+docker-compose up -d
+
+-> S3
+
+aws s3 mb --endpoint-url http://localhost:4566/ --region us-east-1 "s3://static-s3-butcket"
+
+aws s3api --endpoint-url="http://localhost:4566" put-public-access-block --bucket static-s3-bucket --public-access-block-configuration "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false"
+
+aws s3api --endpoint-url="http://localhost:4566/" put-bucket-policy --bucket static-s3-butcket --policy "{"Version":"2012-10-17", "Statement":[{"Sid":"PublicReadGetObject", "Effect":"Allow", "Principal":"*", "Action":"s3:GetObject", "Resource":"arn:aws:s3:::static-s3-butcket"}]}"
+
+aws s3 --endpoint-url="http://localhost:4566" website "s3://static-s3-butcket" --index-document index.html --error-document index.html
+
+aws s3 --endpoint-url="http://localhost:4566" sync "/mnt/e/Users/Cassiano/Repositories/Digital Innovation One/DIO-DEV/dio-aws-localstack-wks/website" "s3://static-s3-butcket"
+
+curl http://localhost:4566/static-s3-butcket/index.html
+
+-> DynamoDB
+
+aws --endpoint-url=http://localhost:4566 dynamodb create-table --cli-input-json file://table-definition.json
+
+aws --endpoint-url=http://localhost:4566 dynamodb scan --table-name "Music"
+
+aws --endpoint-url=http://localhost:4566 dynamodb batch-write-item --request-items file://items.json
+
+-> IAM Roles
+
+aws --endpoint-url=http://localhost:4566 iam create-role --role-name "aws-localstack-wks-execution-role" --assume-role-policy-document file://execution-role.json
+
+aws --endpoint-url=http://localhost:4566 iam create-role --role-name "aws-localstack-wks-trust-role" --assume-role-policy-document file://trust-policy.json
+
+aws --endpoint-url=http://localhost:4566 iam list-roles
+
+-> Lambda
+
+zip function.zip index.js
+
+aws --endpoint-url=http://localhost:4566 lambda create-function --function-name "aws-localstack-hello-function" --zip-file fileb://function.zip --handler 'index.handler' --runtime nodejs14.x --role aws-localstack-wks-execution-role
+
+aws --endpoint-url=http://localhost:4566 lambda invoke --function-name "aws-localstack-hello-function" output.json --log-type Tail --query 'LogResult' --output text | base64 -d
+
+-> CDK
+
+cdklocal init sample-app --language typescript
+
+T1 npm run watch
+ 
+T2 cdklocal synth > out.yml
+
+cdklocal bootstrap

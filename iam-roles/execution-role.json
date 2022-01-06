@@ -1,0 +1,25 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:DescribeStream",
+        "dynamodb:GetRecords",
+        "dynamodb:GetShardIterator",
+        "dynamodb:ListStreams",
+        "dynamodb:PutItem",
+        "dynamodb:GetItem",
+        "dynamodb:ListItems",
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "sts:AssumeRole"
+      ],
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Resource": "*"
+    }
+  ]
+}
