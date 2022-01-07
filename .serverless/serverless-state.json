@@ -210,7 +210,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641488685128-2022-01-06T17:04:45.128Z/dio-aws-serverless-local-wks.zip"
+                "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641555847100-2022-01-07T11:44:07.100Z/dio-aws-serverless-local-wks.zip"
               },
               "Handler": "src/handler.hello",
               "Runtime": "nodejs12.x",
@@ -235,7 +235,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641488685128-2022-01-06T17:04:45.128Z/dio-aws-serverless-local-wks.zip"
+                "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641555847100-2022-01-07T11:44:07.100Z/dio-aws-serverless-local-wks.zip"
               },
               "Handler": "src/putItem.handler",
               "Runtime": "nodejs12.x",
@@ -260,7 +260,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641488685128-2022-01-06T17:04:45.128Z/dio-aws-serverless-local-wks.zip"
+                "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641555847100-2022-01-07T11:44:07.100Z/dio-aws-serverless-local-wks.zip"
               },
               "Handler": "src/scanItems.handler",
               "Runtime": "nodejs12.x",
@@ -285,7 +285,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641488685128-2022-01-06T17:04:45.128Z/dio-aws-serverless-local-wks.zip"
+                "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641555847100-2022-01-07T11:44:07.100Z/dio-aws-serverless-local-wks.zip"
               },
               "Handler": "src/getItem.handler",
               "Runtime": "nodejs12.x",
@@ -310,7 +310,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641488685128-2022-01-06T17:04:45.128Z/dio-aws-serverless-local-wks.zip"
+                "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641555847100-2022-01-07T11:44:07.100Z/dio-aws-serverless-local-wks.zip"
               },
               "Handler": "src/createTable.handler",
               "Runtime": "nodejs12.x",
@@ -335,7 +335,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641488685128-2022-01-06T17:04:45.128Z/dio-aws-serverless-local-wks.zip"
+                "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641555847100-2022-01-07T11:44:07.100Z/dio-aws-serverless-local-wks.zip"
               },
               "Handler": "src/listTables.handler",
               "Runtime": "nodejs12.x",
@@ -360,7 +360,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641488685128-2022-01-06T17:04:45.128Z/dio-aws-serverless-local-wks.zip"
+                "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641555847100-2022-01-07T11:44:07.100Z/dio-aws-serverless-local-wks.zip"
               },
               "Handler": "src/updateItem.handler",
               "Runtime": "nodejs12.x",
@@ -378,74 +378,74 @@
               "UpdateItemLogGroup"
             ]
           },
-          "HelloLambdaVersion0nG3vKWRrL9yMBwkJQAzeFym9QlrcLdgDthXuLtpk": {
+          "HelloLambdaVersion25EsIZAzQaafT67ik73Nmj89bFSKDM3x5NmWdaEKRM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "HelloLambdaFunction"
               },
-              "CodeSha256": "oqm12YHXGSpxyXNviVWFeVJ+g8MWeH6NHFaztLk7Nko="
+              "CodeSha256": "cwdU/IPmOqOjCwTvHo21U8vvrTHI7fCecW0FwUtHiS8="
             }
           },
-          "PutItemLambdaVersionwMKh1KjzHx06Qy3mrW2TUtbFT5SEoasNQz5UeCXGCLU": {
+          "PutItemLambdaVersion0cymxMujilu389kzbtbSDBFk9jzmBLqazs0Rc8USU": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "PutItemLambdaFunction"
               },
-              "CodeSha256": "oqm12YHXGSpxyXNviVWFeVJ+g8MWeH6NHFaztLk7Nko="
+              "CodeSha256": "cwdU/IPmOqOjCwTvHo21U8vvrTHI7fCecW0FwUtHiS8="
             }
           },
-          "ScanItemsLambdaVersionJvqK2bq7QEsGQ34yEWhqUXVC3KtWmQySUcA8VNq5s": {
+          "ScanItemsLambdaVersionSRcAQ1cyQYmgS3Y8BoL4qx0jouz4CjV8iqhfri4Vs": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ScanItemsLambdaFunction"
               },
-              "CodeSha256": "oqm12YHXGSpxyXNviVWFeVJ+g8MWeH6NHFaztLk7Nko="
+              "CodeSha256": "cwdU/IPmOqOjCwTvHo21U8vvrTHI7fCecW0FwUtHiS8="
             }
           },
-          "GetItemLambdaVersionMd3r1u58bVbY8SPyWBtneKOwYGstxmlqMVDjRuc": {
+          "GetItemLambdaVersion0deH9vdBuzJk2dHoRBQNBMEq7T7YLgNnjCVERufjvHM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetItemLambdaFunction"
               },
-              "CodeSha256": "oqm12YHXGSpxyXNviVWFeVJ+g8MWeH6NHFaztLk7Nko="
+              "CodeSha256": "cwdU/IPmOqOjCwTvHo21U8vvrTHI7fCecW0FwUtHiS8="
             }
           },
-          "CreateTableLambdaVersionwj5ABHEWrqDkNEchWfDceRqUfnw7lAD8cymWMo": {
+          "CreateTableLambdaVersionbGtzGnAIhdAEFxloOEcnZchyeB4NlXyPBX2IuFdqjM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateTableLambdaFunction"
               },
-              "CodeSha256": "oqm12YHXGSpxyXNviVWFeVJ+g8MWeH6NHFaztLk7Nko="
+              "CodeSha256": "cwdU/IPmOqOjCwTvHo21U8vvrTHI7fCecW0FwUtHiS8="
             }
           },
-          "ListTablesLambdaVersionSUfcFdt2omOMW2qtWH4tSuwCjqhlx6qiOjFnpWgj5Gg": {
+          "ListTablesLambdaVersionqjuS9BAxRTI8gWG1pJX1NUJhWvepi4VnNeSZVL8nKs": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ListTablesLambdaFunction"
               },
-              "CodeSha256": "oqm12YHXGSpxyXNviVWFeVJ+g8MWeH6NHFaztLk7Nko="
+              "CodeSha256": "cwdU/IPmOqOjCwTvHo21U8vvrTHI7fCecW0FwUtHiS8="
             }
           },
-          "UpdateItemLambdaVersiono04nljw7dspwGrvO7EG49IXjwfox5i8b3zMm1Sam6I": {
+          "UpdateItemLambdaVersion8xs8bIjQDRQAEP53otZoXHcZaZg6qX1lqbmEUq6yI": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "UpdateItemLambdaFunction"
               },
-              "CodeSha256": "oqm12YHXGSpxyXNviVWFeVJ+g8MWeH6NHFaztLk7Nko="
+              "CodeSha256": "cwdU/IPmOqOjCwTvHo21U8vvrTHI7fCecW0FwUtHiS8="
             }
           },
           "ApiGatewayRestApi": {
@@ -520,6 +520,18 @@
               }
             }
           },
+          "ApiGatewayResourceGetitemIdVar": {
+            "Type": "AWS::ApiGateway::Resource",
+            "Properties": {
+              "ParentId": {
+                "Ref": "ApiGatewayResourceGetitem"
+              },
+              "PathPart": "{id}",
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              }
+            }
+          },
           "ApiGatewayResourceCreatetable": {
             "Type": "AWS::ApiGateway::Resource",
             "Properties": {
@@ -560,6 +572,18 @@
                 ]
               },
               "PathPart": "updateitem",
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              }
+            }
+          },
+          "ApiGatewayResourceUpdateitemIdVar": {
+            "Type": "AWS::ApiGateway::Resource",
+            "Properties": {
+              "ParentId": {
+                "Ref": "ApiGatewayResourceUpdateitem"
+              },
+              "PathPart": "{id}",
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               }
@@ -703,13 +727,13 @@
               "ScanItemsLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayMethodGetitemGet": {
+          "ApiGatewayMethodGetitemIdVarGet": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "HttpMethod": "GET",
               "RequestParameters": {},
               "ResourceId": {
-                "Ref": "ApiGatewayResourceGetitem"
+                "Ref": "ApiGatewayResourceGetitemIdVar"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -841,13 +865,13 @@
               "ListTablesLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayMethodUpdateitemPut": {
+          "ApiGatewayMethodUpdateitemIdVarPut": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
               "HttpMethod": "PUT",
               "RequestParameters": {},
               "ResourceId": {
-                "Ref": "ApiGatewayResourceUpdateitem"
+                "Ref": "ApiGatewayResourceUpdateitemIdVar"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -887,7 +911,7 @@
               "UpdateItemLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1641488681260": {
+          "ApiGatewayDeployment1641555843491": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -899,10 +923,10 @@
               "ApiGatewayMethodHelloGet",
               "ApiGatewayMethodPutitemPost",
               "ApiGatewayMethodScanitemsGet",
-              "ApiGatewayMethodGetitemGet",
+              "ApiGatewayMethodGetitemIdVarGet",
               "ApiGatewayMethodCreatetablePost",
               "ApiGatewayMethodListtablesGet",
-              "ApiGatewayMethodUpdateitemPut"
+              "ApiGatewayMethodUpdateitemIdVarPut"
             ]
           },
           "HelloLambdaPermissionApiGateway": {
@@ -1177,7 +1201,7 @@
           "HelloLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "HelloLambdaVersion0nG3vKWRrL9yMBwkJQAzeFym9QlrcLdgDthXuLtpk"
+              "Ref": "HelloLambdaVersion25EsIZAzQaafT67ik73Nmj89bFSKDM3x5NmWdaEKRM"
             },
             "Export": {
               "Name": "sls-dio-aws-serverless-local-wks-local-HelloLambdaFunctionQualifiedArn"
@@ -1186,7 +1210,7 @@
           "PutItemLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "PutItemLambdaVersionwMKh1KjzHx06Qy3mrW2TUtbFT5SEoasNQz5UeCXGCLU"
+              "Ref": "PutItemLambdaVersion0cymxMujilu389kzbtbSDBFk9jzmBLqazs0Rc8USU"
             },
             "Export": {
               "Name": "sls-dio-aws-serverless-local-wks-local-PutItemLambdaFunctionQualifiedArn"
@@ -1195,7 +1219,7 @@
           "ScanItemsLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ScanItemsLambdaVersionJvqK2bq7QEsGQ34yEWhqUXVC3KtWmQySUcA8VNq5s"
+              "Ref": "ScanItemsLambdaVersionSRcAQ1cyQYmgS3Y8BoL4qx0jouz4CjV8iqhfri4Vs"
             },
             "Export": {
               "Name": "sls-dio-aws-serverless-local-wks-local-ScanItemsLambdaFunctionQualifiedArn"
@@ -1204,7 +1228,7 @@
           "GetItemLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetItemLambdaVersionMd3r1u58bVbY8SPyWBtneKOwYGstxmlqMVDjRuc"
+              "Ref": "GetItemLambdaVersion0deH9vdBuzJk2dHoRBQNBMEq7T7YLgNnjCVERufjvHM"
             },
             "Export": {
               "Name": "sls-dio-aws-serverless-local-wks-local-GetItemLambdaFunctionQualifiedArn"
@@ -1213,7 +1237,7 @@
           "CreateTableLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreateTableLambdaVersionwj5ABHEWrqDkNEchWfDceRqUfnw7lAD8cymWMo"
+              "Ref": "CreateTableLambdaVersionbGtzGnAIhdAEFxloOEcnZchyeB4NlXyPBX2IuFdqjM"
             },
             "Export": {
               "Name": "sls-dio-aws-serverless-local-wks-local-CreateTableLambdaFunctionQualifiedArn"
@@ -1222,7 +1246,7 @@
           "ListTablesLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ListTablesLambdaVersionSUfcFdt2omOMW2qtWH4tSuwCjqhlx6qiOjFnpWgj5Gg"
+              "Ref": "ListTablesLambdaVersionqjuS9BAxRTI8gWG1pJX1NUJhWvepi4VnNeSZVL8nKs"
             },
             "Export": {
               "Name": "sls-dio-aws-serverless-local-wks-local-ListTablesLambdaFunctionQualifiedArn"
@@ -1231,7 +1255,7 @@
           "UpdateItemLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "UpdateItemLambdaVersiono04nljw7dspwGrvO7EG49IXjwfox5i8b3zMm1Sam6I"
+              "Ref": "UpdateItemLambdaVersion8xs8bIjQDRQAEP53otZoXHcZaZg6qX1lqbmEUq6yI"
             },
             "Export": {
               "Name": "sls-dio-aws-serverless-local-wks-local-UpdateItemLambdaFunctionQualifiedArn"
@@ -1381,7 +1405,7 @@
         "memory": 1024,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "HelloLambdaVersion0nG3vKWRrL9yMBwkJQAzeFym9QlrcLdgDthXuLtpk"
+        "versionLogicalId": "HelloLambdaVersion25EsIZAzQaafT67ik73Nmj89bFSKDM3x5NmWdaEKRM"
       },
       "putItem": {
         "handler": "src/putItem.handler",
@@ -1400,7 +1424,7 @@
         "memory": 1024,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "PutItemLambdaVersionwMKh1KjzHx06Qy3mrW2TUtbFT5SEoasNQz5UeCXGCLU"
+        "versionLogicalId": "PutItemLambdaVersion0cymxMujilu389kzbtbSDBFk9jzmBLqazs0Rc8USU"
       },
       "scanItems": {
         "handler": "src/scanItems.handler",
@@ -1419,7 +1443,7 @@
         "memory": 1024,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "ScanItemsLambdaVersionJvqK2bq7QEsGQ34yEWhqUXVC3KtWmQySUcA8VNq5s"
+        "versionLogicalId": "ScanItemsLambdaVersionSRcAQ1cyQYmgS3Y8BoL4qx0jouz4CjV8iqhfri4Vs"
       },
       "getItem": {
         "handler": "src/getItem.handler",
@@ -1427,7 +1451,7 @@
         "events": [
           {
             "http": {
-              "path": "getitem",
+              "path": "getitem/{id}",
               "method": "get",
               "integration": "AWS_PROXY"
             }
@@ -1438,7 +1462,7 @@
         "memory": 1024,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "GetItemLambdaVersionMd3r1u58bVbY8SPyWBtneKOwYGstxmlqMVDjRuc"
+        "versionLogicalId": "GetItemLambdaVersion0deH9vdBuzJk2dHoRBQNBMEq7T7YLgNnjCVERufjvHM"
       },
       "createTable": {
         "handler": "src/createTable.handler",
@@ -1457,7 +1481,7 @@
         "memory": 1024,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "CreateTableLambdaVersionwj5ABHEWrqDkNEchWfDceRqUfnw7lAD8cymWMo"
+        "versionLogicalId": "CreateTableLambdaVersionbGtzGnAIhdAEFxloOEcnZchyeB4NlXyPBX2IuFdqjM"
       },
       "listTables": {
         "handler": "src/listTables.handler",
@@ -1476,7 +1500,7 @@
         "memory": 1024,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "ListTablesLambdaVersionSUfcFdt2omOMW2qtWH4tSuwCjqhlx6qiOjFnpWgj5Gg"
+        "versionLogicalId": "ListTablesLambdaVersionqjuS9BAxRTI8gWG1pJX1NUJhWvepi4VnNeSZVL8nKs"
       },
       "updateItem": {
         "handler": "src/updateItem.handler",
@@ -1484,7 +1508,7 @@
         "events": [
           {
             "http": {
-              "path": "updateitem",
+              "path": "updateitem/{id}",
               "method": "put",
               "integration": "AWS_PROXY"
             }
@@ -1495,7 +1519,7 @@
         "memory": 1024,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "UpdateItemLambdaVersiono04nljw7dspwGrvO7EG49IXjwfox5i8b3zMm1Sam6I"
+        "versionLogicalId": "UpdateItemLambdaVersion8xs8bIjQDRQAEP53otZoXHcZaZg6qX1lqbmEUq6yI"
       }
     },
     "configValidationMode": "warn",
@@ -1523,7 +1547,7 @@
     "artifact": "E:\\Users\\Cassiano\\Repositories\\Digital Innovation One\\DIO-DEV\\dio-aws-serverless-local-wks\\.serverless\\dio-aws-serverless-local-wks.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/dio-aws-serverless-local-wks/local/1641488685128-2022-01-06T17:04:45.128Z",
+    "artifactDirectoryName": "serverless/dio-aws-serverless-local-wks/local/1641555847100-2022-01-07T11:44:07.100Z",
     "artifact": "dio-aws-serverless-local-wks.zip"
   }
 }

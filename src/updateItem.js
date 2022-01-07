@@ -21,17 +21,15 @@ module.exports.handler = async (event) => {
 
     var message;
 
-    var actor = "Miranha";
+    const {id} = event.pathParameters
+    const {author} = JSON.parse(event.body)
 
     const params = {
-        TableName: 'Movies',
-        Key: {
-            "year":2021,
-            "title":"Miranha Limpando a Casa"
-        },
-        UpdateExpression: 'set actor = :a',
+        TableName: 'Music',
+        Key: {"id":id},
+        UpdateExpression: 'set author = :a',
         ExpressionAttributeValues: {
-            ':a': actor,
+            ':a': author,
         },
         ReturnValues: "UPDATED_NEW"
     } 

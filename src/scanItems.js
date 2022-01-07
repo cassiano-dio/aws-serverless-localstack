@@ -15,7 +15,7 @@ module.exports.handler = async (event) => {
 
 
     try {
-        data = await dynamo.scan({ TableName: "Movies" }).promise();
+        data = await dynamo.scan({ TableName: "Music" }).promise();
         message = data.Items;
     } catch (error) {
         message = error;

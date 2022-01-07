@@ -7,6 +7,10 @@ module.exports.handler = async (event) => {
 
     var data = JSON.parse(dataFile)
 
+    const {id, year, title, author} = JSON.parse(event.body)
+
+    console.log(year)
+
     AWS.config.update({
         endpoint: "http://host.docker.internal:4566"
     });
@@ -15,15 +19,16 @@ module.exports.handler = async (event) => {
 
     var message;
     var newItem = {
-        "year": data.year,
-        "title": data.title,
-        "soundtrack":data.soundtrack
+        "id": id,
+        "year": year,
+        "title":title,
+        "author":author
     };
 
     try {
 
         await dynamo.put({
-            "TableName": "Movies",
+            "TableName": "Music",
             "Item": newItem
         }).promise()
         message = newItem;

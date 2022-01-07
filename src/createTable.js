@@ -12,14 +12,12 @@ module.exports.handler = async (event) => {
     var message;
 
     var params = {
-        TableName : "Movies",
+        TableName : "Music",
         KeySchema: [       
-            { AttributeName: "year", KeyType: "HASH"},  //Partition key
-            { AttributeName: "title", KeyType: "RANGE" }  //Sort key
+            { AttributeName: "id", KeyType: "HASH"},  //Partition key
         ],
         AttributeDefinitions: [       
-            { AttributeName: "year", AttributeType: "N" },
-            { AttributeName: "title", AttributeType: "S" }
+            { AttributeName: "id", AttributeType: "S" }
         ],
         ProvisionedThroughput: {       
             ReadCapacityUnits: 10, 

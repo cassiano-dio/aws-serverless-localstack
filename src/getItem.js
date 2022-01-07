@@ -9,11 +9,14 @@ module.exports.handler = async (event) => {
 
     const dynamo = new AWS.DynamoDB.DocumentClient();
 
+    const {id} = event.pathParameters
+    
+
     var message;
     var params = {
         
-        TableName: "Movies",
-        Key: {"year":1980, "title":"1942"}
+        TableName: "Music",
+        Key: {"id":id}
     };
 
 

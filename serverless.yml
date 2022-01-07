@@ -48,7 +48,7 @@ functions:
     timeout: 45
     events:
       - http:
-          path: getitem
+          path: getitem/{id}
           method: get
 
   createTable:
@@ -72,5 +72,5 @@ functions:
     timeout: 45
     events:
       - http:
-          path: updateitem
+          path: updateitem/{id}
           method: put
