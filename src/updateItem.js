@@ -14,7 +14,7 @@ const AWS = require("aws-sdk");
 module.exports.handler = async (event) => {
 
     AWS.config.update({
-        endpoint: "http://localhost:4566"
+        endpoint: "http://host.docker.internal:4566"
     });
 
     const dynamo = new AWS.DynamoDB.DocumentClient();

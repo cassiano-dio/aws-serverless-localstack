@@ -3,12 +3,12 @@ const AWS = require("aws-sdk");
 const fs = require('fs');
 module.exports.handler = async (event) => {
 
-    let dataFile = fs.readFileSync('./data.json');
+    let dataFile = fs.readFileSync('./data/put-data.json');
 
     var data = JSON.parse(dataFile)
 
     AWS.config.update({
-        endpoint: "http://localhost:4566"
+        endpoint: "http://host.docker.internal:4566"
     });
 
     const dynamo = new AWS.DynamoDB.DocumentClient();

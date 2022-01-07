@@ -4,7 +4,7 @@ const AWS = require("aws-sdk");
 module.exports.handler = async (event) => {
 
     AWS.config.update({
-        endpoint: "http://localhost:4566"
+        endpoint: "http://host.docker.internal:4566"
     });
 
     const dynamo = new AWS.DynamoDB.DocumentClient();
@@ -13,14 +13,14 @@ module.exports.handler = async (event) => {
     var params = {
         
         TableName: "Movies",
-        Key: {"year":2020, "title":"1917"}
+        Key: {"year":1980, "title":"1942"}
     };
 
 
     try {
 
         const result = await dynamo.get(params).promise()
-        message = result;
+        message = result.Item;
 
     } catch (error) {
 

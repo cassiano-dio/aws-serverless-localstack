@@ -4,7 +4,7 @@ const AWS = require("aws-sdk");
 module.exports.handler = async (event) => {
     
     AWS.config.update({
-        endpoint: "http://localhost:4566"
+        endpoint: "http://host.docker.internal:4566"
     });
 
     const dynamo = new AWS.DynamoDB();
@@ -12,7 +12,7 @@ module.exports.handler = async (event) => {
     var message;
 
     var params = {
-        TableName : "AlbumMetal",
+        TableName : "Movies",
         KeySchema: [       
             { AttributeName: "year", KeyType: "HASH"},  //Partition key
             { AttributeName: "title", KeyType: "RANGE" }  //Sort key
@@ -27,18 +27,16 @@ module.exports.handler = async (event) => {
         }
     };
 
-    await dynamo.createTable(params).promise()
-    message = "oi"
-    // try {
+    try {
 
-    //     const result = await dynamo.createTable(params).promise()
-    //     console.log(result)
-    //     message = result;
+        const result = await dynamo.createTable(params).promise()
+        console.log(result)
+        message = result;
 
-    // } catch (error) {
+    } catch (error) {
 
-    //     message = error
-    // }
+        message = error
+    }
 
     return {
         statusCode: 200,

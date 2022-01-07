@@ -74,43 +74,43 @@
     "HelloLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/dio-aws-serverless-local-wks-dev-hello"
+        "LogGroupName": "/aws/lambda/dio-aws-serverless-local-wks-local-hello"
       }
     },
     "PutItemLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/dio-aws-serverless-local-wks-dev-putItem"
+        "LogGroupName": "/aws/lambda/dio-aws-serverless-local-wks-local-putItem"
       }
     },
     "ScanItemsLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/dio-aws-serverless-local-wks-dev-scanItems"
+        "LogGroupName": "/aws/lambda/dio-aws-serverless-local-wks-local-scanItems"
       }
     },
     "GetItemLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/dio-aws-serverless-local-wks-dev-getItem"
+        "LogGroupName": "/aws/lambda/dio-aws-serverless-local-wks-local-getItem"
       }
     },
     "CreateTableLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/dio-aws-serverless-local-wks-dev-createTable"
+        "LogGroupName": "/aws/lambda/dio-aws-serverless-local-wks-local-createTable"
       }
     },
     "ListTablesLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/dio-aws-serverless-local-wks-dev-listTables"
+        "LogGroupName": "/aws/lambda/dio-aws-serverless-local-wks-local-listTables"
       }
     },
     "UpdateItemLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/dio-aws-serverless-local-wks-dev-updateItem"
+        "LogGroupName": "/aws/lambda/dio-aws-serverless-local-wks-local-updateItem"
       }
     },
     "IamRoleLambdaExecution": {
@@ -139,7 +139,7 @@
                 "-",
                 [
                   "dio-aws-serverless-local-wks",
-                  "dev",
+                  "local",
                   "lambda"
                 ]
               ]
@@ -155,7 +155,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/dio-aws-serverless-local-wks-dev*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/dio-aws-serverless-local-wks-local*:*"
                     }
                   ]
                 },
@@ -166,7 +166,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/dio-aws-serverless-local-wks-dev*:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/dio-aws-serverless-local-wks-local*:*:*"
                     }
                   ]
                 }
@@ -180,7 +180,7 @@
             "-",
             [
               "dio-aws-serverless-local-wks",
-              "dev",
+              "local",
               {
                 "Ref": "AWS::Region"
               },
@@ -197,11 +197,11 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/dio-aws-serverless-local-wks/dev/1641478985010-2022-01-06T14:23:05.010Z/dio-aws-serverless-local-wks.zip"
+          "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641488685128-2022-01-06T17:04:45.128Z/dio-aws-serverless-local-wks.zip"
         },
         "Handler": "src/handler.hello",
         "Runtime": "nodejs12.x",
-        "FunctionName": "dio-aws-serverless-local-wks-dev-hello",
+        "FunctionName": "dio-aws-serverless-local-wks-local-hello",
         "MemorySize": 1024,
         "Timeout": 45,
         "Role": {
@@ -222,11 +222,11 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/dio-aws-serverless-local-wks/dev/1641478985010-2022-01-06T14:23:05.010Z/dio-aws-serverless-local-wks.zip"
+          "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641488685128-2022-01-06T17:04:45.128Z/dio-aws-serverless-local-wks.zip"
         },
         "Handler": "src/putItem.handler",
         "Runtime": "nodejs12.x",
-        "FunctionName": "dio-aws-serverless-local-wks-dev-putItem",
+        "FunctionName": "dio-aws-serverless-local-wks-local-putItem",
         "MemorySize": 1024,
         "Timeout": 45,
         "Role": {
@@ -247,11 +247,11 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/dio-aws-serverless-local-wks/dev/1641478985010-2022-01-06T14:23:05.010Z/dio-aws-serverless-local-wks.zip"
+          "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641488685128-2022-01-06T17:04:45.128Z/dio-aws-serverless-local-wks.zip"
         },
         "Handler": "src/scanItems.handler",
         "Runtime": "nodejs12.x",
-        "FunctionName": "dio-aws-serverless-local-wks-dev-scanItems",
+        "FunctionName": "dio-aws-serverless-local-wks-local-scanItems",
         "MemorySize": 1024,
         "Timeout": 45,
         "Role": {
@@ -272,11 +272,11 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/dio-aws-serverless-local-wks/dev/1641478985010-2022-01-06T14:23:05.010Z/dio-aws-serverless-local-wks.zip"
+          "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641488685128-2022-01-06T17:04:45.128Z/dio-aws-serverless-local-wks.zip"
         },
         "Handler": "src/getItem.handler",
         "Runtime": "nodejs12.x",
-        "FunctionName": "dio-aws-serverless-local-wks-dev-getItem",
+        "FunctionName": "dio-aws-serverless-local-wks-local-getItem",
         "MemorySize": 1024,
         "Timeout": 45,
         "Role": {
@@ -297,11 +297,11 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/dio-aws-serverless-local-wks/dev/1641478985010-2022-01-06T14:23:05.010Z/dio-aws-serverless-local-wks.zip"
+          "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641488685128-2022-01-06T17:04:45.128Z/dio-aws-serverless-local-wks.zip"
         },
         "Handler": "src/createTable.handler",
         "Runtime": "nodejs12.x",
-        "FunctionName": "dio-aws-serverless-local-wks-dev-createTable",
+        "FunctionName": "dio-aws-serverless-local-wks-local-createTable",
         "MemorySize": 1024,
         "Timeout": 45,
         "Role": {
@@ -322,11 +322,11 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/dio-aws-serverless-local-wks/dev/1641478985010-2022-01-06T14:23:05.010Z/dio-aws-serverless-local-wks.zip"
+          "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641488685128-2022-01-06T17:04:45.128Z/dio-aws-serverless-local-wks.zip"
         },
         "Handler": "src/listTables.handler",
         "Runtime": "nodejs12.x",
-        "FunctionName": "dio-aws-serverless-local-wks-dev-listTables",
+        "FunctionName": "dio-aws-serverless-local-wks-local-listTables",
         "MemorySize": 1024,
         "Timeout": 45,
         "Role": {
@@ -347,11 +347,11 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/dio-aws-serverless-local-wks/dev/1641478985010-2022-01-06T14:23:05.010Z/dio-aws-serverless-local-wks.zip"
+          "S3Key": "serverless/dio-aws-serverless-local-wks/local/1641488685128-2022-01-06T17:04:45.128Z/dio-aws-serverless-local-wks.zip"
         },
         "Handler": "src/updateItem.handler",
         "Runtime": "nodejs12.x",
-        "FunctionName": "dio-aws-serverless-local-wks-dev-updateItem",
+        "FunctionName": "dio-aws-serverless-local-wks-local-updateItem",
         "MemorySize": 1024,
         "Timeout": 45,
         "Role": {
@@ -365,80 +365,80 @@
         "UpdateItemLogGroup"
       ]
     },
-    "HelloLambdaVersion7vZgXXMyJsktcMKF45tSHTLQX1RviwgPlxxDQzdzLw": {
+    "HelloLambdaVersion0nG3vKWRrL9yMBwkJQAzeFym9QlrcLdgDthXuLtpk": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "HelloLambdaFunction"
         },
-        "CodeSha256": "U4MqyYjuOh9f1RccAtiK9SRjCNc2Is41e7G/RutCYfI="
+        "CodeSha256": "oqm12YHXGSpxyXNviVWFeVJ+g8MWeH6NHFaztLk7Nko="
       }
     },
-    "PutItemLambdaVersionglzKcHAholLl3CCS4ogpRKni9Hin8wBhP3y0OIrI": {
+    "PutItemLambdaVersionwMKh1KjzHx06Qy3mrW2TUtbFT5SEoasNQz5UeCXGCLU": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "PutItemLambdaFunction"
         },
-        "CodeSha256": "U4MqyYjuOh9f1RccAtiK9SRjCNc2Is41e7G/RutCYfI="
+        "CodeSha256": "oqm12YHXGSpxyXNviVWFeVJ+g8MWeH6NHFaztLk7Nko="
       }
     },
-    "ScanItemsLambdaVersionLAREAp3BSrC4oC5uonn19baLovWLOQk7CW5fUFDWY": {
+    "ScanItemsLambdaVersionJvqK2bq7QEsGQ34yEWhqUXVC3KtWmQySUcA8VNq5s": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ScanItemsLambdaFunction"
         },
-        "CodeSha256": "U4MqyYjuOh9f1RccAtiK9SRjCNc2Is41e7G/RutCYfI="
+        "CodeSha256": "oqm12YHXGSpxyXNviVWFeVJ+g8MWeH6NHFaztLk7Nko="
       }
     },
-    "GetItemLambdaVersionSlRYNZuKWv2BbHQggM6ckNiRriV09wiCnKRF3yUhk8": {
+    "GetItemLambdaVersionMd3r1u58bVbY8SPyWBtneKOwYGstxmlqMVDjRuc": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetItemLambdaFunction"
         },
-        "CodeSha256": "U4MqyYjuOh9f1RccAtiK9SRjCNc2Is41e7G/RutCYfI="
+        "CodeSha256": "oqm12YHXGSpxyXNviVWFeVJ+g8MWeH6NHFaztLk7Nko="
       }
     },
-    "CreateTableLambdaVersionF6qVfijjlKygLf786aKXomeUtGegBfvMqpwyOYP9chY": {
+    "CreateTableLambdaVersionwj5ABHEWrqDkNEchWfDceRqUfnw7lAD8cymWMo": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateTableLambdaFunction"
         },
-        "CodeSha256": "U4MqyYjuOh9f1RccAtiK9SRjCNc2Is41e7G/RutCYfI="
+        "CodeSha256": "oqm12YHXGSpxyXNviVWFeVJ+g8MWeH6NHFaztLk7Nko="
       }
     },
-    "ListTablesLambdaVersionDFf4c8JZqjQepLuw5wo8kWjQarRGbTWlTOMgsGxk0gY": {
+    "ListTablesLambdaVersionSUfcFdt2omOMW2qtWH4tSuwCjqhlx6qiOjFnpWgj5Gg": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ListTablesLambdaFunction"
         },
-        "CodeSha256": "U4MqyYjuOh9f1RccAtiK9SRjCNc2Is41e7G/RutCYfI="
+        "CodeSha256": "oqm12YHXGSpxyXNviVWFeVJ+g8MWeH6NHFaztLk7Nko="
       }
     },
-    "UpdateItemLambdaVersionfMrxc3ELK0SCrZAOgQd0tXq7pwlcSY8MMwUhUUSM": {
+    "UpdateItemLambdaVersiono04nljw7dspwGrvO7EG49IXjwfox5i8b3zMm1Sam6I": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UpdateItemLambdaFunction"
         },
-        "CodeSha256": "U4MqyYjuOh9f1RccAtiK9SRjCNc2Is41e7G/RutCYfI="
+        "CodeSha256": "oqm12YHXGSpxyXNviVWFeVJ+g8MWeH6NHFaztLk7Nko="
       }
     },
     "ApiGatewayRestApi": {
       "Type": "AWS::ApiGateway::RestApi",
       "Properties": {
-        "Name": "dev-dio-aws-serverless-local-wks",
+        "Name": "local-dio-aws-serverless-local-wks",
         "EndpointConfiguration": {
           "Types": [
             "EDGE"
@@ -874,13 +874,13 @@
         "UpdateItemLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1641478980747": {
+    "ApiGatewayDeployment1641488681260": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
         },
-        "StageName": "dev"
+        "StageName": "local"
       },
       "DependsOn": [
         "ApiGatewayMethodHelloGet",
@@ -1158,70 +1158,70 @@
         "Ref": "ServerlessDeploymentBucket"
       },
       "Export": {
-        "Name": "sls-dio-aws-serverless-local-wks-dev-ServerlessDeploymentBucketName"
+        "Name": "sls-dio-aws-serverless-local-wks-local-ServerlessDeploymentBucketName"
       }
     },
     "HelloLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "HelloLambdaVersion7vZgXXMyJsktcMKF45tSHTLQX1RviwgPlxxDQzdzLw"
+        "Ref": "HelloLambdaVersion0nG3vKWRrL9yMBwkJQAzeFym9QlrcLdgDthXuLtpk"
       },
       "Export": {
-        "Name": "sls-dio-aws-serverless-local-wks-dev-HelloLambdaFunctionQualifiedArn"
+        "Name": "sls-dio-aws-serverless-local-wks-local-HelloLambdaFunctionQualifiedArn"
       }
     },
     "PutItemLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "PutItemLambdaVersionglzKcHAholLl3CCS4ogpRKni9Hin8wBhP3y0OIrI"
+        "Ref": "PutItemLambdaVersionwMKh1KjzHx06Qy3mrW2TUtbFT5SEoasNQz5UeCXGCLU"
       },
       "Export": {
-        "Name": "sls-dio-aws-serverless-local-wks-dev-PutItemLambdaFunctionQualifiedArn"
+        "Name": "sls-dio-aws-serverless-local-wks-local-PutItemLambdaFunctionQualifiedArn"
       }
     },
     "ScanItemsLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ScanItemsLambdaVersionLAREAp3BSrC4oC5uonn19baLovWLOQk7CW5fUFDWY"
+        "Ref": "ScanItemsLambdaVersionJvqK2bq7QEsGQ34yEWhqUXVC3KtWmQySUcA8VNq5s"
       },
       "Export": {
-        "Name": "sls-dio-aws-serverless-local-wks-dev-ScanItemsLambdaFunctionQualifiedArn"
+        "Name": "sls-dio-aws-serverless-local-wks-local-ScanItemsLambdaFunctionQualifiedArn"
       }
     },
     "GetItemLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetItemLambdaVersionSlRYNZuKWv2BbHQggM6ckNiRriV09wiCnKRF3yUhk8"
+        "Ref": "GetItemLambdaVersionMd3r1u58bVbY8SPyWBtneKOwYGstxmlqMVDjRuc"
       },
       "Export": {
-        "Name": "sls-dio-aws-serverless-local-wks-dev-GetItemLambdaFunctionQualifiedArn"
+        "Name": "sls-dio-aws-serverless-local-wks-local-GetItemLambdaFunctionQualifiedArn"
       }
     },
     "CreateTableLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateTableLambdaVersionF6qVfijjlKygLf786aKXomeUtGegBfvMqpwyOYP9chY"
+        "Ref": "CreateTableLambdaVersionwj5ABHEWrqDkNEchWfDceRqUfnw7lAD8cymWMo"
       },
       "Export": {
-        "Name": "sls-dio-aws-serverless-local-wks-dev-CreateTableLambdaFunctionQualifiedArn"
+        "Name": "sls-dio-aws-serverless-local-wks-local-CreateTableLambdaFunctionQualifiedArn"
       }
     },
     "ListTablesLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ListTablesLambdaVersionDFf4c8JZqjQepLuw5wo8kWjQarRGbTWlTOMgsGxk0gY"
+        "Ref": "ListTablesLambdaVersionSUfcFdt2omOMW2qtWH4tSuwCjqhlx6qiOjFnpWgj5Gg"
       },
       "Export": {
-        "Name": "sls-dio-aws-serverless-local-wks-dev-ListTablesLambdaFunctionQualifiedArn"
+        "Name": "sls-dio-aws-serverless-local-wks-local-ListTablesLambdaFunctionQualifiedArn"
       }
     },
     "UpdateItemLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UpdateItemLambdaVersionfMrxc3ELK0SCrZAOgQd0tXq7pwlcSY8MMwUhUUSM"
+        "Ref": "UpdateItemLambdaVersiono04nljw7dspwGrvO7EG49IXjwfox5i8b3zMm1Sam6I"
       },
       "Export": {
-        "Name": "sls-dio-aws-serverless-local-wks-dev-UpdateItemLambdaFunctionQualifiedArn"
+        "Name": "sls-dio-aws-serverless-local-wks-local-UpdateItemLambdaFunctionQualifiedArn"
       }
     },
     "ServiceEndpoint": {
@@ -1242,12 +1242,12 @@
             {
               "Ref": "AWS::URLSuffix"
             },
-            "/dev"
+            "/local"
           ]
         ]
       },
       "Export": {
-        "Name": "sls-dio-aws-serverless-local-wks-dev-ServiceEndpoint"
+        "Name": "sls-dio-aws-serverless-local-wks-local-ServiceEndpoint"
       }
     }
   }
